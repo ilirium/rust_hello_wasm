@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8"/>
+    <title>Rust hello-wasm examples</title>
+</head>
+<body>
+<script type="module">
+    import init, {calc_cpu_mul} from "./pkg/rust_hello_wasm.js";
+
+    init().then(() => {
+        calc_cpu_mul(100.0, 200.0);
+    });
+</script>
+</body>
+</html>

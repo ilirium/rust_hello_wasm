@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="utf-8" />
-    <title>hello-wasm example</title>
+    <meta charset="utf-8"/>
+    <title>Rust hello-wasm examples</title>
 </head>
 <body>
-<script type="module">
-    import init, { greet } from "./pkg/rust_hello_wasm.js";
-    init().then(() => {
-        greet("WebAssembly");
-    });
-</script>
+<p>
+    <a href="greet.html">Greet (use the function <code>alert()</code> in JavaScript)</a><br>
+    <a href="calc.html">Calculate</a><br>
+    <a href="calc2.html">Calculate 2</a><br>
+</p>
 </body>
 </html>
