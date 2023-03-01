@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rust hello-wasm examples</title>
+    <!--    <style type="text/css">body {-->
+    <!--        margin: 30px;-->
+    <!--    }</style>-->
+    <script type="module">
+        import {multiply} from "./calc5.js";
+
+        export function handleClick() {
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("a").value;
+            let result = multiply(a, b);
+            document.getElementById("result").textContent = result;
+        }
+    </script>
+</head>
+<body>
+<label for="a">A:</label>
+<input type="number" id="a">
+<label for="b">B:</label>
+<input type="number" id="b">
+<button onclick="handleClick()">Multiply</button>
+<p>The result is: <span id="result"></span>
+</p>
+</body>
+</html>

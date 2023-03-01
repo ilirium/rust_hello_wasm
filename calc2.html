@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="UTF-8">
     <title>Rust hello-wasm examples</title>
-    <style type="text/css">body {
-        margin: 30px;
-    }</style>
-<!--    <script type="module" src="./calc3.js"></script>-->
+<!--    <style type="text/css">body {-->
+<!--        margin: 30px;-->
+<!--    }</style>-->
+    <script type="module">
+        import {multiply} from "./calc5.js";
+
+        function handleClick() {
+            let a = document.getElementById("firstNumber").value;
+            let b = document.getElementById("secondNumber").value;
+            let result = multiply(a, b);
+            document.getElementById("result").textContent = result;
+        }
+    </script>
 </head>
 <body>
-<script type="module">
-    // import init, { calc_cpu_mul } from "./pkg/rust_hello_wasm.js";
-
-    async function multiplyBy() {
-        // await init();
-        let numA;
-        let numB;
-        numA = document.getElementById("firstNumber").value;
-        numB = document.getElementById("secondNumber").value;
-        // document.getElementById("result").innerHTML = calc_cpu_mul(numA, numB);
-        document.getElementById("result").innerHTML = numA * numB;
-    }
-</script>
 <form>
-    1st number: <input type="text" id="firstNumber" /><br>
-    2st number: <input type="text" id="secondNumber" /><br>
-    <input type="button" onclick="multiplyBy()" value="Multiply" />
+    1st number: <input type="number" id="firstNumber" /><br>
+    2st number: <input type="number" id="secondNumber" /><br>
+<!--    <input type="button" onclick="handleClick()" value="Multiply" />-->
+    <button onclick="handleClick()">Multiply</button>
 </form>
 <p>The result is: <span id="result"></span>
 </p>
