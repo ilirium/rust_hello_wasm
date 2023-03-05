@@ -14,3 +14,18 @@ pub fn greet(name: &str) {
 pub fn calc_cpu_mul(a: f64, b: f64) -> f64 {
     a * b
 }
+
+#[wasm_bindgen]
+pub fn calc_cpu_div(a: f64, b: f64) -> f64 {
+    a / b
+}
+
+#[wasm_bindgen]
+pub fn calc_cpu_sum(a: f64, b: f64) -> f64 {
+    a + b
+}
+
+#[wasm_bindgen]
+pub fn calc_cpu_sub(a: f64, b: f64) -> f64 {
+    a - b
+}
