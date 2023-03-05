@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate</title>
+    <style> body {
+        margin: 30px;
+    }</style>
+    <script type="module">
+        import {jsMul} from './math_js.js';
+        import {waMul} from './math_wasm.js';
+
+        function jsMulClick() {
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            let result = jsMul(a, b);
+            document.getElementById('jsResult').textContent = result;
+        }
+
+        function waMulClick() {
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            waMul(a, b).then(function (result) {
+                document.getElementById('waResult').textContent = result;
+            });
+        }
+
+        window.jsMulClick = jsMulClick;
+        window.waMulClick = waMulClick;
+    </script>
+</head>
+<body>
+<p>
+    <label for="a">A:</label><input type="number" id="a">
+    <label for="b">B:</label><input type="number" id="b">
+</p>
+<p>
+    <button onclick="window.jsMulClick()">Multiply in JS</button>
+    <button onclick="window.waMulClick()">Multiply in WASM</button>
+</p>
+<p>
+    Result from JS: <span id="jsResult"></span><br>
+    Result from WASM: <span id="waResult"></span>
+</p>
+</body>
+</html>
