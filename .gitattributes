@@ -1,0 +1,18 @@
+# Step: Files
+*.csv filter=lfs diff=lfs merge=lfs -text
+
+# Step: Documents
+*.pdf filter=lfs diff=lfs merge=lfs -text
+
+# Step: Archives
+*.gz filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+
+# Step: Images
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.tiff filter=lfs diff=lfs merge=lfs -text
+*.tif filter=lfs diff=lfs merge=lfs -text
+
+# Step: WASM
+*.wasm filter=lfs diff=lfs merge=lfs -text

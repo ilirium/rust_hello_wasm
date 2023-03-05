@@ -1,0 +1,21 @@
+{
+  "name": "rust_hello_wasm",
+  "collaborators": [
+    "ilirium115@gmail.com"
+  ],
+  "description": "A sample project with wasm-pack",
+  "version": "0.1.0",
+  "license": "MIT/Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilirium/rust_hello_wasm"
+  },
+  "files": [
+    "rust_hello_wasm_bg.wasm",
+    "rust_hello_wasm.js",
+    "rust_hello_wasm.d.ts"
+  ],
+  "module": "rust_hello_wasm.js",
+  "types": "rust_hello_wasm.d.ts",
+  "sideEffects": false
+}
