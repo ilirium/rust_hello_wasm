@@ -7,26 +7,7 @@
         margin: 30px;
     }</style>
     <script type="module">
-        import {jsMul} from './math_js.js';
-        import {waMul} from './math_wasm.js';
-
-        function jsMulClick() {
-            let a = document.getElementById('a').value;
-            let b = document.getElementById('b').value;
-            let result = jsMul(a, b);
-            document.getElementById('jsResult').textContent = result;
-        }
-
-        function waMulClick() {
-            let a = document.getElementById('a').value;
-            let b = document.getElementById('b').value;
-            waMul(a, b).then(function (result) {
-                document.getElementById('waResult').textContent = result;
-            });
-        }
-
-        window.jsMulClick = jsMulClick;
-        window.waMulClick = waMulClick;
+        import "./calc_handlers.js"
     </script>
 </head>
 <body>
